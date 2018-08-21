@@ -57,3 +57,7 @@ main{
 .song-title {
     background-color: #00000093;
 }
+
+audio {
+    width: 75%;
+}

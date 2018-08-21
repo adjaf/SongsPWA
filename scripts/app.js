@@ -26,6 +26,7 @@
             song.querySelector('.song-title').textContent = s.title;
             song.querySelector('.song-details').textContent = s.artist;
             song.querySelector('.song-link').href = s.open_url;
+            song.querySelector('.song-preview').src = s.preview_url;
             song.removeAttribute('hidden');
             
             row.appendChild(song);
