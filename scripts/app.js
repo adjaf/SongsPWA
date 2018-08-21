@@ -43,8 +43,7 @@
             caches.match(url).then(function(response) {
                 if (response) {
                 response.json().then(function updateFromCache(json) {
-                    console.log(json);
-                    app.songs = json.songs;
+                    app.songs = json;
                     app.displaySongs();
                 });
                 }
