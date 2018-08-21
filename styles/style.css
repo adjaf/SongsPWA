@@ -22,7 +22,7 @@ header > img {
 header .btnReload{
     float: right;
     height: 26px;
-    width: 28px;
+    width: 26px;
     margin-right: 30px;
     margin-top: 12px;
     font-size: 30px;
@@ -54,6 +54,6 @@ main{
     z-index: -1;
 }
 
-#song-title {
+.song-title {
     background-color: #00000093;
 }

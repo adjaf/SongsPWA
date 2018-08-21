@@ -4,21 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Songs Recommendations PWA.">
     <title>Songs PWA</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link rel="stylesheet" href="styles/materialize.min.css">
 
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="manifest" href="./manifest.json">
+    <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#000000">
 </head>
 <body>
     <header class="header">
-        <img src="images/logo.jpg" alt="">
-        <img src="images/baseline_refresh_white_18dp.png" class="btnReload" id="btnRefresh"/>
+        <img src="images/logo.jpg" alt="Logo">
+        <img src="images/baseline_refresh_white_18dp.png" class="btnReload" id="btnRefresh" alt="Refresh"/>
     </header>
 
     <div class="background"></div>
@@ -28,14 +27,14 @@
             <div class="col s12 songTemplate" hidden>
                 <div class="card">
                     <div class="card-image">
-                        <img class="responsive-img" src="images/logo.jpg" id="song-img">
-                        <span class="card-title"><strong id="song-title">Card Title</strong></span>
+                        <img class="song-img responsive-img " src="" alt="Cover">
+                        <span class="card-title"><strong class="song-title">Card Title</strong></span>
                     </div>
                     <div class="card-content">
-                        <h5><strong>Artist:</strong> <span id="song-details"></span></h5>
+                        <h5><strong>Artist:</strong> <span class="song-details"></span></h5>
                     </div>
                     <div class="card-action center-align">
-                        <a href="#" class="btn-large green accent-4" id="song-link" target="_blank">Listen</a>
+                        <a href="#" rel="noopener" class="song-link btn-large green accent-4 black-text" target="_blank"><strong>Listen</strong></a>
                     </div>
                     </div>
             </div>
@@ -51,8 +50,6 @@
             </div>
         </div>
     </footer>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
     <script src="scripts/app.js"></script>
 </body>
 </html>

@@ -19,15 +19,27 @@
 
         //artist, image_small, open_url, title
         //.song-img, .song-title, .song-details, .song-url
-        app.songs.forEach(function (s) {
+        var added=0;
+        for (let i = 0; i < 5; i++) {
+            const item = app.songs[i];
             var song = app.songTemplate.cloneNode(true);
-            song.querySelector('#song-img').src = s.image_large;
-            song.querySelector('#song-title').textContent = s.title;
-            song.querySelector('#song-details').textContent = s.artist;
-            song.querySelector('#song-link').href = s.open_url;
+            song.querySelector('.song-img').src = item.image_large;
+            song.querySelector('.song-title').textContent = item.title;
+            song.querySelector('.song-details').textContent = item.artist;
+            song.querySelector('.song-link').href = item.open_url;
             song.removeAttribute('hidden');
             app.container.appendChild(song);
-        })
+        }
+        // app.songs.forEach(function (s) {
+        //     console.log("creating song--");
+        //     var song = app.songTemplate.cloneNode(true);
+        //     song.querySelector('.song-img').src = s.image_large;
+        //     song.querySelector('.song-title').textContent = s.title;
+        //     song.querySelector('.song-details').textContent = s.artist;
+        //     song.querySelector('.song-link').href = s.open_url;
+        //     song.removeAttribute('hidden');
+        //     app.container.appendChild(song);
+        // });
     }
 
     app.loadSongs = function() {

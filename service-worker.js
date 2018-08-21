@@ -8,6 +8,7 @@ var filesToCache = [
   './index.html',
   './scripts/app.js',
   './styles/style.css',
+  './styles/materialize.min.css',
   './images/logo.jpg',
   './images/baseline_refresh_white_18dp.png'
 ];
