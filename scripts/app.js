@@ -5,6 +5,7 @@
       songs: [],
       container: document.querySelector('.song-container'),
       songTemplate: document.querySelector('.songTemplate'),
+      rowTemplate: document.querySelector('.row')
     };
 
     /*
@@ -17,15 +18,23 @@
     app.displaySongs = function () {
         app.container.innerText= '';
 
+        var count = 0;
+        var row = app.rowTemplate.cloneNode(true);
         app.songs.forEach(function (s) {
-            console.log("creating song--");
             var song = app.songTemplate.cloneNode(true);
             song.querySelector('.song-img').src = s.image_large;
             song.querySelector('.song-title').textContent = s.title;
             song.querySelector('.song-details').textContent = s.artist;
             song.querySelector('.song-link').href = s.open_url;
             song.removeAttribute('hidden');
-            app.container.appendChild(song);
+            
+            row.appendChild(song);
+            count++;
+            app.container.appendChild(row);
+            if (count==2) {
+                row = app.rowTemplate.cloneNode(true);
+                count=0;
+            }
         });
     }
 
