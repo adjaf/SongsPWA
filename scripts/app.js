@@ -45,7 +45,7 @@
                 response.json().then(function updateFromCache(json) {
                     console.log(json);
                     app.songs = json.songs;
-                    app.loadSongs();
+                    app.displaySongs();
                 });
                 }
             });
